@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NoteBook - Professional Notes Platform</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <i class="fas fa-book"></i>
+        <span>NoteBook</span>
+      </div>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link active">
+          <i class="fas fa-home"></i> Home
+        </a>
+        <a href="admin.html" class="nav-link">
+          <i class="fas fa-lock"></i> Admin
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>
+          <i class="fas fa-graduation-cap"></i>
+          Welcome to NoteBook
+        </h1>
+        <p>Your Ultimate Digital Notes Sharing Platform</p>
+        <p class="hero-subtitle">Access quality study materials from Chemistry, Biology, Math, Physics & ICT</p>
+      </div>
+      <div class="hero-icon">
+        <i class="fas fa-book-open"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Container -->
+  <div class="container">
+    <!-- Filter Section -->
+    <section class="filter-section">
+      <h2>📚 Choose Your Subject</h2>
+      <div class="subject-filter">
+        <button class="filter-btn active" data-subject="all">
+          <i class="fas fa-list"></i> All Subjects
+        </button>
+        <button class="filter-btn" data-subject="Chemistry">
+          <i class="fas fa-flask"></i> Chemistry
+        </button>
+        <button class="filter-btn" data-subject="Biology">
+          <i class="fas fa-dna"></i> Biology
+        </button>
+        <button class="filter-btn" data-subject="Math">
+          <i class="fas fa-calculator"></i> Math
+        </button>
+        <button class="filter-btn" data-subject="Physics">
+          <i class="fas fa-atom"></i> Physics
+        </button>
+        <button class="filter-btn" data-subject="ICT">
+          <i class="fas fa-computer"></i> ICT
+        </button>
+      </div>
+    </section>
+
+    <!-- Loading State -->
+    <div class="loading-state" id="loadingState">
+      <div class="spinner"></div>
+      <p>Loading amazing notes...</p>
+    </div>
+
+    <!-- Notes Grid -->
+    <section class="notes-section">
+      <div class="notes-grid" id="notesContainer">
+        <!-- Notes will load here -->
+      </div>
+    </section>
+
+    <!-- Empty State -->
+    <div class="empty-state" id="emptyState" style="display:none;">
+      <div class="empty-icon">
+        <i class="fas fa-inbox"></i>
+      </div>
+      <h3>No Notes Found</h3>
+      <p>Select a different subject or check back later for new content</p>
+    </div>
+  </div>
+
+  <!-- Note Preview Modal -->
+  <div class="modal" id="previewModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modalTitle"></h2>
+        <button class="modal-close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-meta">
+          <span class="meta-item">
+            <i class="fas fa-tag"></i> <span id="modalSubject"></span>
+          </span>
+          <span class="meta-item">
+            <i class="fas fa-clock"></i> <span id="modalDate"></span>
+          </span>
+        </div>
+        <p id="modalDescription" class="modal-description"></p>
+      </div>
+      <div class="modal-footer">
+        <a id="downloadBtn" href="#" class="btn btn-primary" download>
+          <i class="fas fa-download"></i> Download File
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p><i class="fas fa-copyright"></i> 2024 NoteBook. Professional Notes Sharing Platform</p>
+      <p>Built with <i class="fas fa-heart"></i> for Students</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
